@@ -1,0 +1,97 @@
+/* 添加到style部分的末尾 */
+#confirmBtn {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    color: white;
+}
+#regretBtn {
+    background: linear-gradient(45deg, #f44336, #FF9800);
+    color: white;
+}
+#confirmBtn:hover {
+    background: linear-gradient(45deg, #388E3C, #689F38);
+}
+#regretBtn:hover {
+    background: linear-gradient(45deg, #D32F2F, #F57C00);
+}
+/* 调整后悔按钮的尺寸 */
+#regretBtn {
+    padding: 4px 8px;       /* 减小内边距 */
+    font-size: 0.6rem;       /* 减小字体大小 */
+    transform: scale(0.6);   /* 整体缩放90% */
+    transform-origin: center; /* 缩放中心点 */
+}
+/* 如果需要更小，可以使用以下尺寸 */
+#regretBtn.smaller {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    transform: scale(0.8);
+
+@media (max-width: 768px) {
+  input, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+  }
+}
+  
+ @media (max-width: 768px) {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+}
+  
+  @media (max-width: 768px) {
+  p, h1, h2, h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+  button {
+  /* 跨浏览器标准化 */
+  -webkit-tap-highlight-color: transparent; /* 移除iOS点击高光 */
+  touch-action: manipulation; /* 优化触摸响应 */
+  
+  /* 防止文字缩放 */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 修复Android默认样式 */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+  :root {
+  --btn-padding: 14px 35px;
+  --btn-font-size: 1.1rem;
+  --btn-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --btn-padding: 12px 28px;
+    --btn-font-size: 1rem;
+    --btn-radius: 40px;
+  }
+}
+
+button {
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  border-radius: var(--btn-radius);
+}
+  
+  #noBtn {
+  position: absolute; /* 改为绝对定位 */
+  transition: all 0.4s ease-out;
+  z-index: 100; /* 确保按钮不会被其他元素覆盖 */
+}
+
+/* 容器需要设为相对定位 */
+.buttons {
+  position: relative;
+  min-height: 100px; /* 给移动留出空间 */
+  overflow: visible; /* 允许内容溢出 */
+}
